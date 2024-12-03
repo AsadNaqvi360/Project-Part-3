@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   if (!req.isAuthenticated()) {
     return res.redirect('/users/login');
   }
-
+//try thing
   try {
     // Fetch inventory items belonging to the logged-in user
     const items = await Item.find({ user_id: req.user.id });
