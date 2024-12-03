@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+
+    <title>Edit Inventory Item</title>
+</head>
+<body>
+    <%- include('../partials/main_nav') %> <!-- Include Navbar -->
+    <div class="container mt-4">
+        <h1 class="mb-4">Edit Inventory Item</h1>
+        <form action="/inventory/edit/<%= Item._id %>" method="post" class="form-group">
+            <label for="ItemName">Item Name:</label>
+            <input type="text" name="ItemName" value="<%= Item.ItemName %>" class="form-control mb-2" required>
+
+            <label for="Supplier">Supplier:</label>
+            <input type="text" name="Supplier" value="<%= Item.Supplier %>" class="form-control mb-2" required>
+
+            <label for="DateReceived">Date Received:</label>
+            <input type="date" name="DateReceived" value="<%= Item.DateReceived ? Item.DateReceived.toISOString().substring(0, 10) : '' %>" class="form-control mb-2" required>
+
+            <label for="ItemDescription">Description:</label>
+            <textarea name="ItemDescription" class="form-control mb-2"><%= Item.ItemDescription %></textarea>
+
+            <label for="Cost">Cost:</label>
+            <input type="number" name="Cost" value="<%= Item.Cost %>" class="form-control mb-2" required>
+
+            <label for="Quantity">Quantity:</label>
+            <input type="number" name="Quantity" value="<%= Item.Quantity %>" class="form-control mb-2" required>
+
+            <button type="submit" class="btn btn-primary mt-3">Save Changes</button>
+        </form>
+    </div>
+</body>
+</html>

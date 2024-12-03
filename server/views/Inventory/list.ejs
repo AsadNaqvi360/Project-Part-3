@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/app.css">
+
+    <title>Warehouse Inventory</title>
+</head>
+<body>
+    <%- include('../partials/main_nav') %> 
+    <div class="container mt-4">
+        <h1 class="mb-4">Inventory List</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item Name</th>
+                    <th>Supplier</th>
+                    <th>Date Received</th>
+                    <th>Description</th>
+                    <th>Cost</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% ItemList.forEach(function(item) { %>
+                    <tr>
+                        <td><%= item.ItemName %></td>
+                        <td><%= item.Supplier %></td>
+                        <td><%= item.DateReceived ? item.DateReceived.toDateString() : '' %></td>
+                        <td><%= item.ItemDescription %></td>
+                        <td><%= item.Cost %></td>
+                        <td><%= item.Quantity %></td>
+                        <td>
+                            <a href="/inventory/edit/<%= item._id %>" class="btn btn-sm btn-secondary">Edit</a>
+                            <a href="/inventory/delete/<%= item._id %>" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <a href="/inventory/add" class="btn btn-primary mt-3">Add New Item</a>
+    </div>
+</body>
+</html>
