@@ -1,29 +1,29 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET index page. */
-router.get('/', function(req, res, next) {
+// GET home page
+router.get('/', function (req, res) {
   res.render('index', { title: 'Home' });
 });
-/* GET home page. */
-router.get('/home', function(req, res, next) {
-  res.render('index', { title: 'Home' });
+
+// GET aboutus page
+router.get('/aboutus', function (req, res) {
+  res.render('aboutus', { title: 'About Us' });
 });
-/* GET About page. */
-router.get('/aboutus', function(req, res, next) {
-  res.render('index', { title: 'About us' });
+
+// GET products page
+router.get('/products', function (req, res) {
+  res.render('products', { title: 'Products' });
 });
-/* GET products page. */
-router.get('/products', function(req, res, next) {
-  res.render('index', { title: 'Products' });
+
+// GET service page
+router.get('/service', function (req, res) {
+  res.render('service', { title: 'Service' });
 });
-/* GET service page. */
-router.get('/service', function(req, res, next) {
-  res.render('index', { title: 'Service' });
-});
-/* GET contactus page. */
-router.get('/contactus', function(req, res, next) {
-  res.render('index', { title: 'Contact Us' });
+
+// GET contactus page
+router.get('/contactus', function (req, res) {
+  res.render('contactus', { title: 'Contact Us' });
 });
 
 module.exports = router;
