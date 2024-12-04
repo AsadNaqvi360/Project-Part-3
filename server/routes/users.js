@@ -24,6 +24,9 @@ router.post(
 
 // Render registration page
 router.get('/register', (req, res) => {
+  if (req.isAuthenticated()) {
+    return res.redirect('/'); // Redirect to home page if already logged in
+  }
   res.render('register', { title: 'Register' });
 });
 
