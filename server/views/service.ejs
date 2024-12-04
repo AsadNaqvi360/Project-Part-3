@@ -4,11 +4,47 @@
 <body>
   <%- include('partials/main_nav') %> <!-- Include Navbar -->
 
-  <div class="container">
-    <h1>Services</h1>
-    <p>This is the Services page.</p>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Our Services</h1>
+    <p class="text-center mb-5">At Brown Men Inventory, we provide a wide range of services to help you manage your warehouse efficiently and effectively.</p>
+
+    <div class="row g-4">
+      <!-- Service 1 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg">
+          <div class="card-body text-center">
+            <i class="fas fa-box fa-3x mb-3 text-primary"></i>
+            <h5 class="card-title">Inventory Management</h5>
+            <p class="card-text">Track and manage your inventory with ease using our efficient solutions.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Service 2 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg">
+          <div class="card-body text-center">
+            <i class="fas fa-truck fa-3x mb-3 text-success"></i>
+            <h5 class="card-title">Logistics Support</h5>
+            <p class="card-text">Streamline your supply chain with our expert logistics support services.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Service 3 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg">
+          <div class="card-body text-center">
+            <i class="fas fa-tools fa-3x mb-3 text-danger"></i>
+            <h5 class="card-title">Maintenance Services</h5>
+            <p class="card-text">Keep your warehouse running smoothly with our maintenance services.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <%- include('partials/footer') %> <!-- Include Footer -->
+
+  <!-- Add Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
