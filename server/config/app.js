@@ -89,7 +89,7 @@ app.use((req, res, next) => {
 });
 
 // View engine setup
-app.set('views', path.join(__dirname, '../views')); // Correct path to views
+app.set('views', path.join(__dirname, '../views')); // Correct path to views folder
 app.set('view engine', 'ejs');
 
 // Middleware setup
@@ -98,7 +98,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-// Static files setup for Bootstrap
+// Static files setup for Bootstrap and other assets
 app.use(express.static(path.join(__dirname, '../public'))); // Serves public files
 app.use('/bootstrap', express.static(path.join(__dirname, '../../node_modules/bootstrap/dist'))); // Correct Bootstrap path
 
