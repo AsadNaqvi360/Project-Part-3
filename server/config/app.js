@@ -89,7 +89,7 @@ app.use((req, res, next) => {
 });
 
 // View engine setup
-app.set('views', path.join(__dirname, '../views')); // Correct path to views folder
+app.set('views', path.join(__dirname, '../views')); // Adjusted to match directory structure
 app.set('view engine', 'ejs');
 
 // Middleware setup
