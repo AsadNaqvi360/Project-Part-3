@@ -98,10 +98,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-// Static files setup for Bootstrap and custom CSS
+// Static files setup for Bootstrap
 app.use(express.static(path.join(__dirname, '../public'))); // Serves public files
 app.use('/bootstrap', express.static(path.join(__dirname, '../../node_modules/bootstrap/dist'))); // Correct Bootstrap path
-app.use('/css', express.static(path.join(__dirname, '../public/Content'))); // Custom CSS folder path
 
 // Route setup
 app.use('/', indexRouter); // Correct path to index.js
