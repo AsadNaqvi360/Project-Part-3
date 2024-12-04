@@ -1,9 +1,7 @@
-<%- include('partials/head') %>
 <title>Login</title>
 </head>
 <body>
-  <%- include('partials/main_nav') %> <!-- Include Navbar -->
-
+  <!-- Only the login form is shown on this page -->
   <div class="container">
     <h1>Login</h1>
     <form action="/users/login" method="post">
@@ -15,8 +13,9 @@
 
       <button type="submit">Login</button>
     </form>
-  </div>
 
-  <%- include('partials/footer') %> <!-- Include Footer -->
+    <!-- Register Button -->
+    <p>Don't have an account? <a href="/users/register">Register here</a></p>
+  </div>
 </body>
 </html>

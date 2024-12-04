@@ -77,9 +77,11 @@ app.use((req, res, next) => {
 // Middleware to redirect unauthenticated users to the login page
 app.use((req, res, next) => {
   console.log(`DEBUG: Authenticated: ${req.isAuthenticated()} | Path: ${req.path}`);
+  // Exclude login, register, and home from being redirected if not logged in
   if (
     !req.isAuthenticated() &&
-    !['/users/login', '/users/register', '/'].includes(req.path) // Allow login, registration, and home pages
+    !['/users/login', '/users/register', '/'].includes(req.path) &&
+    !req.path.startsWith('/users')
   ) {
     return res.redirect('/users/login');
   }

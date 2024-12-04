@@ -4,8 +4,11 @@ const passport = require('passport');
 const User = require('../model/user'); // Import your User model
 const bcrypt = require('bcryptjs'); // For hashing passwords
 
-// Render login page
+// Render login page if user is not authenticated
 router.get('/login', (req, res) => {
+  if (req.isAuthenticated()) {
+    return res.redirect('/'); // Redirect to home page if already logged in
+  }
   res.render('login', { title: 'Login' });
 });
 
@@ -13,7 +16,7 @@ router.get('/login', (req, res) => {
 router.post(
   '/login',
   passport.authenticate('local', {
-    successRedirect: '/inventory', // Redirect after successful login
+    successRedirect: '/', // Redirect to the home page after successful login
     failureRedirect: '/users/login', // Redirect back to login on failure
     failureFlash: true, // Enable flash messages
   })
