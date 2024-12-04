@@ -4,14 +4,62 @@
 <body>
   <%- include('partials/main_nav') %> <!-- Include Navbar -->
 
-  <div class="container">
-    <h1>About Us</h1>
-    <p>Brown Men Inc. was founded with the mission to revolutionize the warehouse inventory management industry. 
-      With years of experience and a team of dedicated professionals, we pride ourselves on providing cutting-edge tools 
-      to help businesses manage their inventory effectively. Our vision is to make inventory management seamless, 
-      accurate, and accessible for businesses of all sizes.</p>
+  <div class="container py-5">
+    <!-- About Us Header -->
+    <h1 class="text-center mb-4">About Us</h1>
+    <p class="text-center fs-5">Brown Men Inc. was founded with the mission to revolutionize the warehouse inventory management industry. With years of experience and a team of dedicated professionals, we pride ourselves on providing cutting-edge tools to help businesses manage their inventory effectively. Our vision is to make inventory management seamless, accurate, and accessible for businesses of all sizes.</p>
+
+    <!-- Mission Section -->
+    <div class="mt-5">
+      <h2 class="text-center mb-3">Our Mission</h2>
+      <p class="text-center fs-5">To empower businesses with innovative inventory management solutions, ensuring accuracy and efficiency every step of the way.</p>
+    </div>
+
+    <!-- Core Values Section -->
+    <div class="mt-5">
+      <h2 class="text-center mb-4">Our Core Values</h2>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="card shadow">
+            <div class="card-body">
+              <i class="fas fa-cogs fa-3x mb-3 text-primary"></i>
+              <h5 class="card-title">Innovation</h5>
+              <p class="card-text">We strive to deliver cutting-edge technology to enhance efficiency.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow">
+            <div class="card-body">
+              <i class="fas fa-users fa-3x mb-3 text-success"></i>
+              <h5 class="card-title">Teamwork</h5>
+              <p class="card-text">Collaboration is at the heart of everything we do.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow">
+            <div class="card-body">
+              <i class="fas fa-check fa-3x mb-3 text-danger"></i>
+              <h5 class="card-title">Reliability</h5>
+              <p class="card-text">Our solutions are designed for consistent performance and trustworthiness.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call-to-Action Section -->
+    <div class="mt-5 text-center">
+      <h2 class="mb-3">Have Questions?</h2>
+      <p class="fs-5">We're here to help! Contact us today to learn more about how Brown Men Inc. can assist your business.</p>
+      <a href="/contact" class="btn btn-primary btn-lg">Contact Us</a>
+    </div>
   </div>
 
   <%- include('partials/footer') %> <!-- Include Footer -->
+
+  <!-- Font Awesome for Icons -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMRjz30p7RFopGJ0L5oJDX6nH6DUhKpZfTf7nt+" crossorigin="anonymous"></script>
 </body>
 </html>
