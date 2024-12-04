@@ -4,11 +4,62 @@
 <body>
   <%- include('partials/main_nav') %> <!-- Include Navbar -->
 
-  <div class="container">
-    <h1> At Brown Men Inc., we specialize in innovative warehouse inventory management solutions. 
-      Our platform streamlines operations, boosts efficiency, and ensures your inventory is always optimized for success.</h1>
+  <!-- Hero Section -->
+  <div class="container-fluid bg-black text-white text-center py-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Welcome to Brown Men Inc.</h1>
+      <p class="lead">
+        Your trusted partner for innovative warehouse inventory management solutions. Streamline operations, boost efficiency, and stay ahead of the curve.
+      </p>
+      <a href="/products" class="btn btn-light btn-lg me-2">Explore Products</a>
+      <a href="/contact" class="btn btn-outline-light btn-lg">Contact Us</a>
+    </div>
   </div>
 
-  <%- include('partials/footer') %> <!-- Include Footer -->
-</body>
-</html>
+  <!-- About Section -->
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="fw-bold">Why Choose Brown Men Inc.?</h2>
+        <p class="text-muted">
+          At Brown Men Inc., we are committed to revolutionizing inventory management with cutting-edge technology, reliable solutions, and exceptional customer support. 
+        </p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Real-time inventory tracking</li>
+          <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Cloud-based access for flexibility</li>
+          <li><i class="bi bi-check-circle-fill text-success me-2"></i> Detailed analytics and insights</li>
+        </ul>
+        <a href="/about" class="btn btn-primary bg-black mt-3">Learn More About Us</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="container-fluid bg-light py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4">Our Key Features</h2>
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <i class="bi bi-box-seam display-4 text-primary"></i>
+          <h5 class="mt-3">Inventory Tracking</h5>
+          <p>Ensure accurate stock levels with real-time tracking.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="bi bi-cloud-arrow-up display-4 text-primary"></i>
+          <h5 class="mt-3">Cloud-Based Solutions</h5>
+          <p>Access your data anytime, anywhere with our secure platform.</p>
+        </div>
+        <div class="col-md-4 text-center">
+          <i class="bi bi-bar-chart-line display-4 text-primary"></i>
+          <h5 class="mt-3">Analytics & Reporting</h5>
+          <p>Gain actionable insights for smarter business decisions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <div class="container text-center py-5">
+    <h2 class="fw-bold">Get Started Today!</h2>
+    <p class="lead">Let us help you streamline your inventory management for better efficiency and success.</p>
+    <a href="/contact" class="
