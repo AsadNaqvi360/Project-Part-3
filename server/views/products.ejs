@@ -1,21 +1,55 @@
 <%- include('partials/head') %>
 <title>Products</title>
+<link rel="stylesheet" href="/public/Content/style.css">
 </head>
 <body>
   <%- include('partials/main_nav') %> <!-- Include Navbar -->
 
   <div class="container">
-    <h1>Our Products</h1>
-    <p>Explore our range of advanced inventory management solutions designed to meet the unique needs of your business:
-    </p>
-    <ul>
-      <li><strong>Inventory Tracking Software:</strong> Real-time tracking to ensure accurate stock levels.</li>
-      <li><strong>Barcode Scanning Systems:</strong> Streamline operations with efficient scanning tools.</li>
-      <li><strong>Cloud-Based Inventory Management:</strong> Access your data anytime, anywhere with our secure cloud platform.</li>
-      <li><strong>Analytics & Reporting Tools:</strong> Gain insights into your inventory trends for smarter decision-making.</li>
+    <header class="page-header">
+      <h1>Our Products</h1>
+      <p class="intro-text">Explore our range of advanced inventory management solutions designed to meet the unique needs of your business:</p>
+    </header>
+    
+    <ul class="product-list">
+      <li class="product-item">
+        <i class="icon fas fa-box"></i>
+        <div class="product-content">
+          <h2>Inventory Tracking Software</h2>
+          <p>Real-time tracking to ensure accurate stock levels.</p>
+          <button class="btn">Learn More</button>
+        </div>
+      </li>
+      <li class="product-item">
+        <i class="icon fas fa-barcode"></i>
+        <div class="product-content">
+          <h2>Barcode Scanning Systems</h2>
+          <p>Streamline operations with efficient scanning tools.</p>
+          <button class="btn">Learn More</button>
+        </div>
+      </li>
+      <li class="product-item">
+        <i class="icon fas fa-cloud"></i>
+        <div class="product-content">
+          <h2>Cloud-Based Inventory Management</h2>
+          <p>Access your data anytime, anywhere with our secure cloud platform.</p>
+          <button class="btn">Learn More</button>
+        </div>
+      </li>
+      <li class="product-item">
+        <i class="icon fas fa-chart-line"></i>
+        <div class="product-content">
+          <h2>Analytics & Reporting Tools</h2>
+          <p>Gain insights into your inventory trends for smarter decision-making.</p>
+          <button class="btn">Learn More</button>
+        </div>
+      </li>
     </ul>
   </div>
 
   <%- include('partials/footer') %> <!-- Include Footer -->
+  
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </body>
 </html>
